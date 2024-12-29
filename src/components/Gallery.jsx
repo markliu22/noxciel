@@ -8,6 +8,17 @@ export function Gallery() {
   const { category } = useParams();
   const { images, isLoading, error } = useImages(category);
 
+  const navigateImage = (direction) => {
+    if (!selectedImage) return;
+    
+    const currentIndex = images.findIndex(img => img.id === selectedImage.id);
+    const newIndex = direction === 'next' 
+      ? (currentIndex + 1) % images.length 
+      : (currentIndex - 1 + images.length) % images.length;
+    
+    setSelectedImage(images[newIndex]);
+  };
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading images: {error}</div>;
 
@@ -34,6 +45,8 @@ export function Gallery() {
         <ImageModal
           imageUrl={selectedImage.fullSize}
           onClose={() => setSelectedImage(null)}
+          onNext={() => navigateImage('next')}
+          onPrevious={() => navigateImage('prev')}
         />
       )}
     </>

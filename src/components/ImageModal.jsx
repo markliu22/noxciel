@@ -1,24 +1,38 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-export function ImageModal({ imageUrl, onClose }) {
+export function ImageModal({ imageUrl, onClose, onNext, onPrevious }) {
   useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') onClose();
+    const handleKeyPress = (e) => {
+      switch(e.key) {
+        case 'Escape':
+          onClose();
+          break;
+        case 'ArrowRight':
+          onNext();
+          break;
+        case 'ArrowLeft':
+          onPrevious();
+          break;
+      }
     };
     
-    document.addEventListener('keydown', handleEscape);
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    document.addEventListener('keydown', handleKeyPress);
+    document.body.style.overflow = 'hidden';
     
     return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'auto'; // Restore scrolling when modal closes
+      document.removeEventListener('keydown', handleKeyPress);
+      document.body.style.overflow = 'auto';
     };
-  }, [onClose]);
+  }, [onClose, onNext, onPrevious]);
 
   return createPortal(
     <div className="modal active" onClick={(e) => e.target === e.currentTarget && onClose()}>
       <span className="close" onClick={onClose}>&times;</span>
+      <div className="modal-navigation">
+        <button className="nav-button prev" onClick={onPrevious}>&lt;</button>
+        <button className="nav-button next" onClick={onNext}>&gt;</button>
+      </div>
       <div className="modal-content">
         <img src={imageUrl} alt="Full size artwork" />
       </div>
