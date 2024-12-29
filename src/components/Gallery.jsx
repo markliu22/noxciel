@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { ImageModal } from './ImageModal';
 import { useImages } from '../hooks/useImages';
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const { images, isLoading, error } = useImages();
+  const { category } = useParams();
+  const { images, isLoading, error } = useImages(category);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading images: {error}</div>;
@@ -16,7 +18,7 @@ export function Gallery() {
           <div
             key={image.id}
             className="gallery-item"
-            onClick={() => setSelectedImage(image.fullSize)}
+            onClick={() => setSelectedImage(image)}
           >
             <img
               src={image.thumbnail}
@@ -30,7 +32,7 @@ export function Gallery() {
       
       {selectedImage && (
         <ImageModal
-          imageUrl={selectedImage}
+          imageUrl={selectedImage.fullSize}
           onClose={() => setSelectedImage(null)}
         />
       )}
