@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('./fonts/AGaramondPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('./fonts/AGaramondPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('./fonts/AGaramondPro-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('./fonts/AGaramondPro-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -5,19 +33,24 @@
     box-sizing: border-box;
 }
 
-.app {
-  display: flex;
-  background-color: #1a1a1a;
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
-  min-height: 100vh;
-}
-
 body {
     background-color: #1a1a1a;
     color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Adobe Garamond Pro', 'Garamond', serif !important;
     display: flex;
+}
+
+.app {
+    display: flex;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Adobe Garamond Pro', 'Garamond', serif !important;
+    min-height: 100vh;
+}
+
+/* Apply font to all text elements */
+h1, h2, h3, h4, h5, h6, p, a, span, div {
+    font-family: 'Adobe Garamond Pro', 'Garamond', serif;
 }
 
 /* Sidebar styles */
