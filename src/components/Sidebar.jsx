@@ -6,7 +6,7 @@ export function Sidebar() {
     <nav className="sidebar">
       <h1>Isaac Liu</h1>
       <ul className="nav-links">
-        {['ILLUSTRATIONS', 'SKETCHES', 'CONCEPT ART', 'TRADITIONAL', 'CONTACT'].map((link) => (
+        {['3D', '2D', 'ANIMATION', 'CONTACT'].map((link) => (
           <li key={link}>
             <NavLink to={`/${link.toLowerCase().replace(' ', '-')}`}>
               {link}

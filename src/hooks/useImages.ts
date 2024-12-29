@@ -26,28 +26,28 @@ export const useImages = (category?: string) => {
                         thumbnail: image1,
                         fullSize: image1,
                         title: 'Image 1',
-                        category: 'traditional'
+                        category: '3d'
                     },
                     {
                         id: '2',
                         thumbnail: image2,
                         fullSize: image2,
                         title: 'Image 2',
-                        category: 'concept-art'
+                        category: '2d'
                     },
                     {
                         id: '3',
                         thumbnail: image3,
                         fullSize: image3,
                         title: 'Image 3',
-                        category: 'concept-art'
+                        category: '2d'
                     },
                     {
                         id: '4',
                         thumbnail: image4,
                         fullSize: image4,
                         title: 'Image 4',
-                        category: 'illustrations'
+                        category: 'animation'
                     },
                 ];
 
