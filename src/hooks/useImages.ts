@@ -11,6 +11,10 @@ interface Image {
     title: string;
     description: string;
     category: string;
+    relatedImages?: {
+        fullSize: string;
+        description: string;
+    }[];
 }
 
 export const useImages = (category?: string) => {
@@ -26,9 +30,19 @@ export const useImages = (category?: string) => {
                         id: '1',
                         thumbnail: image1,
                         fullSize: image1,
-                        title: 'Image 1',
-                        description: 'A stunning 3D rendered scene with dynamic lighting.',
-                        category: '3d'
+                        title: 'Bob the Character',
+                        description: 'Front view of Bob, a friendly robot character.',
+                        category: '3d',
+                        relatedImages: [
+                            {
+                                fullSize: image1,
+                                description: 'Side view of Bob showing mechanical details.'
+                            },
+                            {
+                                fullSize: image1,
+                                description: 'Back view of Bob revealing power core.'
+                            }
+                        ]
                     },
                     {
                         id: '2',

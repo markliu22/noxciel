@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-export function ImageModal({ imageUrl, title, description, onClose, onNext, onPrevious }) {
+export function ImageModal({ image, onClose, onNext, onPrevious }) {
   useEffect(() => {
     const handleKeyPress = (e) => {
       switch(e.key) {
@@ -28,16 +28,31 @@ export function ImageModal({ imageUrl, title, description, onClose, onNext, onPr
 
   return createPortal(
     <div className="modal active" onClick={(e) => e.target === e.currentTarget && onClose()}>
-      <span className="close" onClick={onClose}>&times;</span>
-      <div className="modal-navigation">
-        <button className="nav-button prev" onClick={onPrevious}>&lt;</button>
-        <button className="nav-button next" onClick={onNext}>&gt;</button>
-      </div>
-      <div className="modal-content">
-        <img src={imageUrl} alt={title} />
-        <div className="modal-info">
-          <h2>{title}</h2>
-          <p>{description}</p>
+      <div className="modal-container">
+        <span className="close" onClick={onClose}>&times;</span>
+        <div className="modal-navigation">
+          <button className="nav-button prev" onClick={onPrevious}>&lt;</button>
+          <button className="nav-button next" onClick={onNext}>&gt;</button>
+        </div>
+        
+        <div className="modal-content">
+          <div className="modal-info">
+            <h2>{image.title}</h2>
+            <p>{image.description}</p>
+          </div>
+
+          {/* Main image */}
+          <div className="image-container">
+            <img src={image.fullSize} alt={image.title} />
+          </div>
+
+          {/* Related images */}
+          {image.relatedImages?.map((related, index) => (
+            <div key={index} className="image-container">
+              <img src={related.fullSize} alt={`${image.title} - View ${index + 2}`} />
+              <p className="image-description">{related.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>,
