@@ -9,6 +9,7 @@ interface Image {
     thumbnail: string;
     fullSize: string;
     title: string;
+    description: string;
     category: string;
 }
 
@@ -26,6 +27,7 @@ export const useImages = (category?: string) => {
                         thumbnail: image1,
                         fullSize: image1,
                         title: 'Image 1',
+                        description: 'A stunning 3D rendered scene with dynamic lighting.',
                         category: '3d'
                     },
                     {
@@ -33,6 +35,7 @@ export const useImages = (category?: string) => {
                         thumbnail: image2,
                         fullSize: image2,
                         title: 'Image 2',
+                        description: 'Hand-drawn digital illustration showcasing vibrant colors.',
                         category: '2d'
                     },
                     {
@@ -40,6 +43,7 @@ export const useImages = (category?: string) => {
                         thumbnail: image3,
                         fullSize: image3,
                         title: 'Image 3',
+                        description: 'Traditional art piece with modern digital elements.',
                         category: '2d'
                     },
                     {
@@ -47,6 +51,7 @@ export const useImages = (category?: string) => {
                         thumbnail: image4,
                         fullSize: image4,
                         title: 'Image 4',
+                        description: 'Frame from an animated sequence demonstrating fluid motion.',
                         category: 'animation'
                     },
                 ];

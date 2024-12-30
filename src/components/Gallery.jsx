@@ -44,6 +44,8 @@ export function Gallery() {
       {selectedImage && (
         <ImageModal
           imageUrl={selectedImage.fullSize}
+          title={selectedImage.title}
+          description={selectedImage.description}
           onClose={() => setSelectedImage(null)}
           onNext={() => navigateImage('next')}
           onPrevious={() => navigateImage('prev')}

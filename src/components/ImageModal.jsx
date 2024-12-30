@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-export function ImageModal({ imageUrl, onClose, onNext, onPrevious }) {
+export function ImageModal({ imageUrl, title, description, onClose, onNext, onPrevious }) {
   useEffect(() => {
     const handleKeyPress = (e) => {
       switch(e.key) {
@@ -34,7 +34,11 @@ export function ImageModal({ imageUrl, onClose, onNext, onPrevious }) {
         <button className="nav-button next" onClick={onNext}>&gt;</button>
       </div>
       <div className="modal-content">
-        <img src={imageUrl} alt="Full size artwork" />
+        <img src={imageUrl} alt={title} />
+        <div className="modal-info">
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </div>
       </div>
     </div>,
     document.body
