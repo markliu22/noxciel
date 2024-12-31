@@ -115,32 +115,26 @@ h1, h2, h3, h4, h5, h6, p, a, span, div {
     margin-left: 250px;
     width: calc(100% - 250px);
     min-height: 100vh;
+    padding-right: 40px;
 }
 
 /* Gallery Grid */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     padding: 20px;
+    width: 100%;
 }
 
 .gallery-item {
     position: relative;
     width: 100%;
+    aspect-ratio: 1;
     cursor: pointer;
 }
 
-.gallery-item::before {
-    content: '';
-    display: block;
-    padding-top: 100%;
-}
-
 .thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -167,9 +161,13 @@ h1, h2, h3, h4, h5, h6, p, a, span, div {
     overflow-y: auto;
 }
 
-.modal.active {
-    opacity: 1;
-    visibility: visible;
+.modal-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
@@ -180,6 +178,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, div {
     flex-direction: column;
     gap: 40px;
     align-items: center;
+    margin: 0 auto;
 }
 
 .modal-content img {

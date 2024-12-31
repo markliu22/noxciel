@@ -57,6 +57,25 @@ import lewa2 from '../assets/2D/lewa2.jpg';
 import lewa3 from '../assets/2D/lewa3.jpg';
 import vengeance1 from '../assets/2D/vengeance1.jpg';
 import vengeance2 from '../assets/2D/vengeance2.jpg';
+import kamikaze from '../assets/2D/kamikaze.jpg';
+import brs1 from '../assets/2D/brs1.jpg';
+import brs2 from '../assets/2D/brs2.jpg';
+import brs3 from '../assets/2D/brs3.jpg';
+import brs4 from '../assets/2D/brs4.jpg';
+import orbit from '../assets/2D/orbit.jpg';
+import muse from '../assets/2D/muse.jpg';
+import beach from '../assets/2D/beach.jpg';
+import flooded from '../assets/2D/flooded.jpg';
+import lazurite from '../assets/2D/lazurite.jpg';
+import dtb from '../assets/2D/dtb.jpg';
+import whale from '../assets/2D/whale.jpg';
+import magicHands from '../assets/2D/magicHands.jpg';
+import rei from '../assets/2D/rei.jpg';
+import powerFace from '../assets/2D/powerFace.jpg';
+import sushi from '../assets/2D/sushi.jpg';
+import warlock from '../assets/2D/warlock.jpg';
+import libra from '../assets/2D/libra.jpg';
+import noxcielLogo from '../assets/2D/noxcielLogo.jpg';
 
 interface Image {
     id: string;
@@ -417,6 +436,148 @@ export const useImages = (category?: string) => {
                                 description: ''
                             }
                         ]
+                    },
+                    {
+                        id: '20',
+                        thumbnail: kamikaze,
+                        fullSize: kamikaze,
+                        title: 'Kamikaze',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '21',
+                        thumbnail: brs1,
+                        fullSize: brs1,
+                        title: 'BRS',
+                        description: '',
+                        category: '2d',
+                        relatedImages: [
+                            {
+                                fullSize: brs2,
+                                description: ''
+                            },
+                            {
+                                fullSize: brs3,
+                                description: ''
+                            },
+                            {
+                                fullSize: brs4,
+                                description: ''
+                            }
+                        ]
+                    },
+                    {
+                        id: '22',
+                        thumbnail: orbit,
+                        fullSize: orbit,
+                        title: 'Orbit',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '23',
+                        thumbnail: muse,
+                        fullSize: muse,
+                        title: 'Muse',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '24',
+                        thumbnail: beach,
+                        fullSize: beach,
+                        title: 'Beach',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '25',
+                        thumbnail: flooded,
+                        fullSize: flooded,
+                        title: 'Flooded',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '26',
+                        thumbnail: lazurite,
+                        fullSize: lazurite,
+                        title: 'Lazurite',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '27',
+                        thumbnail: dtb,
+                        fullSize: dtb,
+                        title: 'Darker Than Black',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '28',
+                        thumbnail: whale,
+                        fullSize: whale,
+                        title: 'Whale',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '29',
+                        thumbnail: magicHands,
+                        fullSize: magicHands,
+                        title: 'Magic Hands',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '30',
+                        thumbnail: rei,
+                        fullSize: rei,
+                        title: 'Rei',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '31',
+                        thumbnail: powerFace,
+                        fullSize: powerFace,
+                        title: 'Power',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '32',
+                        thumbnail: sushi,
+                        fullSize: sushi,
+                        title: 'Sushi',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '33',
+                        thumbnail: warlock,
+                        fullSize: warlock,
+                        title: 'Warlock',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '34',
+                        thumbnail: libra,
+                        fullSize: libra,
+                        title: 'Libra',
+                        description: '',
+                        category: '2d'
+                    },
+                    {
+                        id: '35',
+                        thumbnail: noxcielLogo,
+                        fullSize: noxcielLogo,
+                        title: 'Noxciel Logo',
+                        description: '',
+                        category: '2d'
                     }
                 ];
 
