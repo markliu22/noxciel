@@ -4,7 +4,9 @@ import { FaEnvelope, FaTwitter, FaArtstation, FaLinkedin } from 'react-icons/fa'
 export function Sidebar() {
   return (
     <nav className="sidebar">
-      <h1>Isaac Liu</h1>
+      <NavLink to="/" className="site-title">
+        <h1>Isaac Liu</h1>
+      </NavLink>
       <ul className="nav-links">
         {['3D', '2D', 'ANIMATION', 'CONTACT'].map((link) => (
           <li key={link}>

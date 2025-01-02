@@ -76,6 +76,10 @@ import sushi from '../assets/2D/sushi.jpg';
 import warlock from '../assets/2D/warlock.jpg';
 import libra from '../assets/2D/libra.jpg';
 import noxcielLogo from '../assets/2D/noxcielLogo.jpg';
+import kaleido from '../assets/animation/KALEiDO.jpg';
+import gaiVSthug from '../assets/animation/gaiVSthug.gif';
+import runAndJump from '../assets/animation/runAndJump.gif';
+import fight from '../assets/animation/fight.gif';
 
 interface Image {
     id: string;
@@ -103,21 +107,21 @@ export const useImages = (category?: string) => {
                         id: '1',
                         thumbnail: dragon1, // TODO: change to thumbnail version
                         fullSize: dragon1,
-                        title: 'Blue-Eyes White Dragon',
-                        description: 'Work in progress of a Blue-Eyes White Dragon.',
+                        title: 'Blue-Eyes White Dragon w.i.p sculpt',
+                        description: 'A work in progress Zbrush sculpt of the Blue-Eyes White Dragon from Yu-Gi-Oh!',
                         category: '3d',
                         relatedImages: [
                             {
                                 fullSize: dragon2,
-                                description: 'Side view.'
+                                description: ''
                             },
                             {
                                 fullSize: dragon3,
-                                description: 'Back view.'
+                                description: ''
                             },
                             {
                                 fullSize: dragon4,
-                                description: 'Head.'
+                                description: ''
                             },
                             {
                                 fullSize: dragon5,
@@ -155,15 +159,15 @@ export const useImages = (category?: string) => {
                         relatedImages: [
                             {
                                 fullSize: sword2,
-                                description: 'Back view.'
+                                description: ''
                             },
                             {
                                 fullSize: sword3,
-                                description: 'Side view.'
+                                description: ''
                             },
                             {
                                 fullSize: sword4,
-                                description: 'Blueprint.'
+                                description: 'UVs'
                             },
                         ]
                     },
@@ -177,11 +181,11 @@ export const useImages = (category?: string) => {
                         relatedImages: [
                             {
                                 fullSize: deadpool2,
-                                description: 'Back view.'
+                                description: ''
                             },
                             {
                                 fullSize: deadpool3,
-                                description: 'Sword.'
+                                description: ''
                             },
                         ]
                     },
@@ -190,12 +194,12 @@ export const useImages = (category?: string) => {
                         thumbnail: cz1,
                         fullSize: cz1,
                         title: 'CZ 75 SP-01 Shadow',
-                        description: 'This is my first fully completed 3D asset, the CZ 75 SP-01 Shadow. I went through the multiple learning curves of modelling, texturing, lighting and rendering.',
+                        description: 'This is my first fully completed 3D asset, the CZ 75 SP-01 Shadow. I went through the multiple learning curves of modelling, retopology, UV editing, and texturing with this one. Blender was used for everything except for texturing, which was done in Substance Painter. Each movable and removable part is rigged and ready for animation.',
                         category: '3d',
                         relatedImages: [
                             {
                                 fullSize: cz2,
-                                description: 'Blueprint.'
+                                description: ''
                             },
                         ]
                     },
@@ -301,8 +305,8 @@ export const useImages = (category?: string) => {
                         id: '11',
                         thumbnail: room1,
                         fullSize: room1,
-                        title: 'Room',
-                        description: '',
+                        title: 'Victorian Room Line Art',
+                        description: 'Concept art for a Victorian style room.',
                         category: '2d',
                         relatedImages: [
                             {
@@ -341,7 +345,7 @@ export const useImages = (category?: string) => {
                         relatedImages: [
                             {
                                 fullSize: lux2,
-                                description: ''
+                                description: 'His boots, both sides.'
                             }
                         ]
                     },
@@ -350,24 +354,24 @@ export const useImages = (category?: string) => {
                         thumbnail: killingWord,
                         fullSize: killingWord,
                         title: 'The Killing Word',
-                        description: 'This is a concept art of a pistol design that I have been throwing around in my head for years now. It started off as a simple idea of a blocky handgun with brutalist design language, and I have made countless unsuccessful sketches of it in far too many places. Finally, one day I sat down and forced its final form into being, and drew, rendered, and designed the markings for the entire design. However, it has proven folly to ever think of any design as finished, because now there are more details I want to change.',
+                        description: 'This is the concept art of a pistol design that I had been throwing around in my head for years now. It started off as a simple idea of a blocky handgun with brutalist design language, and I had made countless unsuccessful sketches of it in far too many places. Finally, one day I sat down and forced its final form into being, and drew, rendered, and designed the markings for the finalized depiction.',
                         category: '2d'
                     },
                     {
                         id: '16',
                         thumbnail: iddqd1,
                         fullSize: iddqd1,
-                        title: 'IDDQD Magazine Work',
-                        description: 'https://iddqd.pub/',
+                        title: 'IDDQD Magazine Work. https://iddqd.pub/',
+                        description: 'Second finalized magazine header for IDDQD',
                         category: '2d',
                         relatedImages: [
                             {
                                 fullSize: iddqd2,
-                                description: ''
+                                description: 'Icon 1'
                             },
                             {
                                 fullSize: iddqd3,
-                                description: ''
+                                description: 'Icon 2'
                             }
                         ]
                     },
@@ -376,32 +380,32 @@ export const useImages = (category?: string) => {
                         thumbnail: header1,
                         fullSize: header1,
                         title: 'Old school TTRPG magazine header',
-                        description: 'Header design for a TTRPG magazine. Associated sketches and process work is included below.',
+                        description: 'Initial rough ideation and sketches done for a TTRPG magazine, with the first finalized iteration of the magazine header included at the bottom.',
                         category: '2d',
                         relatedImages: [
                             {
                                 fullSize: header2,
-                                description: ''
+                                description: 'Rough Ideation 2'
                             },
                             {
                                 fullSize: header3,
-                                description: ''
+                                description: 'Rough Ideation 3'
                             },
                             {
                                 fullSize: header4,
-                                description: ''
+                                description: 'Rough Ideation 4'
                             },
                             {
                                 fullSize: header5,
-                                description: ''
+                                description: 'Rough Ideation 5'
                             },
                             {
                                 fullSize: header6,
-                                description: ''
+                                description: 'Rough ideation 6, to be developed into the second finalized iteration of the magazine header'
                             },
                             {
                                 fullSize: header7,
-                                description: ''
+                                description: 'First completed iteration of the magazine header, inspired by the art and UI of the original DOOM game'
                             },
                         ]
                     },
@@ -409,17 +413,17 @@ export const useImages = (category?: string) => {
                         id: '18',
                         thumbnail: lewa1,
                         fullSize: lewa1,
-                        title: 'Lewa and Tanma',
-                        description: 'from Bionicle.',
+                        title: 'Lewa and Tanma from Bionicle',
+                        description: 'Final Illustration',
                         category: '2d',
                         relatedImages: [
                             {
                                 fullSize: lewa2,
-                                description: ''
+                                description: 'Completed line work'
                             },
                             {
                                 fullSize: lewa3,
-                                description: ''
+                                description: 'Initial sketch and pose'
                             }
                         ]
                     },
@@ -427,8 +431,8 @@ export const useImages = (category?: string) => {
                         id: '19',
                         thumbnail: vengeance1,
                         fullSize: vengeance1,
-                        title: 'Vengeance',
-                        description: '',
+                        title: 'Portrait of Vengeance',
+                        description: 'The Titan form of Eren Jaeger from the anime Attack on Titan.',
                         category: '2d',
                         relatedImages: [
                             {
@@ -578,6 +582,38 @@ export const useImages = (category?: string) => {
                         title: 'Noxciel Logo',
                         description: '',
                         category: '2d'
+                    },
+                    {
+                        id: '36',
+                        thumbnail: kaleido,
+                        fullSize: kaleido,
+                        title: 'Phase KALEiDO Deput Promotional Video',
+                        description: 'I did second key animation (tie down animation) on several of the cuts in this video. I am only allowed to show one frame of my work unfortunately.',
+                        category: 'animation'
+                    },
+                    {
+                        id: '37',
+                        thumbnail: gaiVSthug,
+                        fullSize: gaiVSthug,
+                        title: 'Guilty Crown Episode 1 Fight Scene Study',
+                        description: 'A study of a segment of a fight scene in the first episode of the anime Guilty Crown.',
+                        category: 'animation'
+                    },
+                    {
+                        id: '38',
+                        thumbnail: runAndJump,
+                        fullSize: runAndJump,
+                        title: 'Run and Jump',
+                        description: '',
+                        category: 'animation'
+                    },
+                    {
+                        id: '39',
+                        thumbnail: fight,
+                        fullSize: fight,
+                        title: 'Right',
+                        description: '',
+                        category: 'animation'
                     }
                 ];
 
