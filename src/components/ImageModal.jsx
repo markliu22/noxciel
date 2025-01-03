@@ -26,6 +26,30 @@ export function ImageModal({ image, onClose, onNext, onPrevious }) {
     };
   }, [onClose, onNext, onPrevious]);
 
+  const renderContent = () => {
+    if (image.type === 'video' && image.videoUrl) {
+      return (
+        <div className="video-container">
+          <iframe
+            width="960"
+            height="540"
+            src={`https://www.youtube.com/embed/${image.videoUrl}`}
+            title={image.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      );
+    }
+
+    return (
+      <div className="image-container">
+        <img src={image.fullSize} alt={image.title} />
+      </div>
+    );
+  };
+
   return createPortal(
     <div className="modal active" onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal-container">
@@ -41,10 +65,7 @@ export function ImageModal({ image, onClose, onNext, onPrevious }) {
             <p>{image.description}</p>
           </div>
 
-          {/* Main image */}
-          <div className="image-container">
-            <img src={image.fullSize} alt={image.title} />
-          </div>
+          {renderContent()}
 
           {/* Related images */}
           {image.relatedImages?.map((related, index) => (

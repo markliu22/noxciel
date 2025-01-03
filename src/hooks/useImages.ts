@@ -169,6 +169,8 @@ interface Image {
     title: string;
     description: string;
     category: string;
+    type?: 'image' | 'video';
+    videoUrl?: string;
     relatedImages?: {
         fullSize: string;
         description: string;
@@ -666,11 +668,19 @@ export const useImages = (category?: string) => {
                     },
                     {
                         id: '36',
-                        thumbnail: kaleido,
-                        fullSize: kaleido,
-                        title: 'Phase KALEiDO Deput Promotional Video',
-                        description: 'I did second key animation (tie down animation) on several of the cuts in this video. I am only allowed to show one frame of my work unfortunately.',
-                        category: 'animation'
+                        thumbnail: 'https://img.youtube.com/vi/Rdgsr9QHfd8/maxresdefault.jpg', // YouTube thumbnail
+                        fullSize: 'https://img.youtube.com/vi/Rdgsr9QHfd8/maxresdefault.jpg',  // Same thumbnail for consistency
+                        title: 'Phase KALEiDO Debut Promotional Video',
+                        description: 'I did second key animation (tie down animation) on several of the cuts in this video.',
+                        category: 'animation',
+                        type: 'video',
+                        videoUrl: 'Rdgsr9QHfd8',  // YouTube video ID
+                        relatedImages: [
+                            {
+                                fullSize: kaleido,
+                                description: 'Frame from my animation work'
+                            }
+                        ]
                     },
                     {
                         id: '37',
@@ -695,7 +705,17 @@ export const useImages = (category?: string) => {
                         title: 'Fight',
                         description: '',
                         category: 'animation'
-                    }
+                    },
+                    // {
+                    //     id: '40',
+                    //     thumbnail: thumbnailImage,  // A preview image for the video
+                    //     fullSize: thumbnailImage,   // Same preview image
+                    //     title: 'My YouTube Video',
+                    //     description: 'Description of the video',
+                    //     category: 'animation',
+                    //     type: 'video',
+                    //     videoUrl: 'dQw4w9WgXcQ'  // The YouTube video ID from the URL
+                    // }
                 ];
 
                 // Filter images based on category
