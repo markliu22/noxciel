@@ -692,7 +692,7 @@ export const useImages = (category?: string) => {
                         id: '39',
                         thumbnail: fight,
                         fullSize: fight,
-                        title: 'Right',
+                        title: 'Fight',
                         description: '',
                         category: 'animation'
                     }
