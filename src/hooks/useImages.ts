@@ -616,22 +616,22 @@ export const useImages = (category?: string) => {
                         description: '',
                         category: '2d'
                     },
-                    {
-                        id: '30',
-                        thumbnail: rei,
-                        fullSize: rei,
-                        title: 'Rei',
-                        description: '',
-                        category: '2d'
-                    },
-                    {
-                        id: '31',
-                        thumbnail: powerFace,
-                        fullSize: powerFace,
-                        title: 'Power',
-                        description: '',
-                        category: '2d'
-                    },
+                    // {
+                    //     id: '30',
+                    //     thumbnail: rei,
+                    //     fullSize: rei,
+                    //     title: 'Rei',
+                    //     description: '',
+                    //     category: '2d'
+                    // },
+                    // {
+                    //     id: '31',
+                    //     thumbnail: powerFace,
+                    //     fullSize: powerFace,
+                    //     title: 'Power',
+                    //     description: '',
+                    //     category: '2d'
+                    // },
                     {
                         id: '32',
                         thumbnail: sushi,
