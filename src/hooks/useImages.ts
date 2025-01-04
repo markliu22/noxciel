@@ -678,7 +678,7 @@ export const useImages = (category?: string) => {
                         relatedImages: [
                             {
                                 fullSize: kaleido,
-                                description: 'Frame from my animation work'
+                                description: 'I am only allowed to show this one frame of my work unfortunately.'
                             }
                         ]
                     },
