@@ -80,8 +80,8 @@ import kaleido from '/assets/animation/kaleido.jpg';
 import gaiVSthug from '/assets/animation/gaiVSthug.gif';
 import runAndJump from '/assets/animation/runAndJump.gif';
 import fight from '/assets/animation/fight.gif';
-import darkgirl1 from '/assets/2d/darkgirl1.jpg';
-import darkgirl2 from '/assets/2d/darkgirl2.gif';
+import darkgirl1 from '/assets/2D/darkgirl1.jpg';
+import darkgirl2 from '/assets/2D/darkgirl2.gif';
 
 interface Image {
     id: string;
