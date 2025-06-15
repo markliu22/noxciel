@@ -1,85 +1,4 @@
 import { useState, useEffect } from 'react';
-// import dragon1 from '../assets/3D/dragon1.jpg';
-// import dragon2 from '../assets/3D/dragon2.jpg';
-// import dragon3 from '../assets/3D/dragon3.jpg';
-// import dragon4 from '../assets/3D/dragon4.jpg'; 
-// import dragon5 from '../assets/3D/dragon5.jpg';
-// import dragon6 from '../assets/3D/dragon6.jpg';
-// import dragon7 from '../assets/3D/dragon7.jpg';
-// import dragon8 from '../assets/3D/dragon8.jpg';
-// import dragon9 from '../assets/3D/dragon9.jpg';
-// import dragon10 from '../assets/3D/dragon10.jpg';
-// import sword1 from '../assets/3D/sword1.jpg';
-// import sword2 from '../assets/3D/sword2.jpg';
-// import sword3 from '../assets/3D/sword3.jpg';
-// import sword4 from '../assets/3D/sword4.jpg';
-// import deadpool1 from '../assets/3D/deadpool1.jpg';
-// import deadpool2 from '../assets/3D/deadpool2.jpg';
-// import deadpool3 from '../assets/3D/deadpool3.jpg';
-// import cz1 from '../assets/3D/cz1.jpg';
-// import cz2 from '../assets/3D/cz2.jpg';
-// import fiend from '../assets/2D/fiend.jpg';
-// import phantom1 from '../assets/2D/phantom1.jpg';
-// import phantom2 from '../assets/2D/phantom2.jpg';
-// import phantom3 from '../assets/2D/phantom3.jpg';
-// import phantom4 from '../assets/2D/phantom4.jpg';
-// import ghoul1 from '../assets/2D/ghoul1.jpg';
-// import ghoul2 from '../assets/2D/ghoul2.jpg';
-// import ghouldWeapon1 from '../assets/2D/ghoulWeapon1.jpg';
-// import ghouldWeapon2 from '../assets/2D/ghoulWeapon2.jpg';
-// import officer1 from '../assets/2D/officer1.jpg';
-// import officer2 from '../assets/2D/officer2.jpg';
-// import officer3 from '../assets/2D/officer3.jpg';
-// import officer4 from '../assets/2D/officer4.jpg';
-// import officer5 from '../assets/2D/officer5.jpg';
-// import magician1 from '../assets/2D/magician1.jpg';
-// import magician2 from '../assets/2D/magician2.jpg';
-// import room1 from '../assets/2D/room1.jpg';
-// import room2 from '../assets/2D/room2.jpg';
-// import room3 from '../assets/2D/room3.jpg';
-// import power from '../assets/2D/power.jpg';
-// import austere from '../assets/2D/austere.jpg';
-// import lux1 from '../assets/2D/lux1.jpg';
-// import lux2 from '../assets/2D/lux2.jpg';
-// import killingWord from '../assets/2D/killingWord.jpg';
-// import iddqd1 from '../assets/2D/iddqd1.jpg';
-// import iddqd2 from '../assets/2D/iddqd2.jpg';
-// import iddqd3 from '../assets/2D/iddqd3.jpg';
-// import header1 from '../assets/2D/header1.jpg';
-// import header2 from '../assets/2D/header2.jpg';
-// import header3 from '../assets/2D/header3.jpg';
-// import header4 from '../assets/2D/header4.jpg';
-// import header5 from '../assets/2D/header5.jpg';
-// import header6 from '../assets/2D/header6.jpg';
-// import header7 from '../assets/2D/header7.jpg';
-// import lewa1 from '../assets/2D/lewa1.jpg';
-// import lewa2 from '../assets/2D/lewa2.jpg';
-// import lewa3 from '../assets/2D/lewa3.jpg';
-// import vengeance1 from '../assets/2D/vengeance1.jpg';
-// import vengeance2 from '../assets/2D/vengeance2.jpg';
-// import kamikaze from '../assets/2D/kamikaze.jpg';
-// import brs1 from '../assets/2D/brs1.jpg';
-// import brs2 from '../assets/2D/brs2.jpg';
-// import brs3 from '../assets/2D/brs3.jpg';
-// import brs4 from '../assets/2D/brs4.jpg';
-// import orbit from '../assets/2D/orbit.jpg';
-// import muse from '../assets/2D/muse.jpg';
-// import beach from '../assets/2D/beach.jpg';
-// import flooded from '../assets/2D/flooded.jpg';
-// import lazurite from '../assets/2D/lazurite.jpg';
-// import dtb from '../assets/2D/dtb.jpg';
-// import whale from '../assets/2D/whale.jpg';
-// import magicHands from '../assets/2D/magicHands.jpg';
-// import rei from '../assets/2D/rei.jpg';
-// import powerFace from '../assets/2D/powerFace.jpg';
-// import sushi from '../assets/2D/sushi.jpg';
-// import warlock from '../assets/2D/warlock.jpg';
-// import libra from '../assets/2D/libra.jpg';
-// import noxcielLogo from '../assets/2D/noxcielLogo.jpg';
-// import kaleido from '../assets/animation/KALEiDO.jpg';
-// import gaiVSthug from '../assets/animation/gaiVSthug.gif';
-// import runAndJump from '../assets/animation/runAndJump.gif';
-// import fight from '../assets/animation/fight.gif';
 import dragon1 from '/assets/3D/dragon1.jpg';
 import dragon2 from '/assets/3D/dragon2.jpg';
 import dragon3 from '/assets/3D/dragon3.jpg';
@@ -161,6 +80,8 @@ import kaleido from '/assets/animation/kaleido.jpg';
 import gaiVSthug from '/assets/animation/gaiVSthug.gif';
 import runAndJump from '/assets/animation/runAndJump.gif';
 import fight from '/assets/animation/fight.gif';
+import darkgirl1 from '/assets/2d/darkgirl1.jpg';
+import darkgirl2 from '/assets/2d/darkgirl2.gif';
 
 interface Image {
     id: string;
@@ -706,16 +627,20 @@ export const useImages = (category?: string) => {
                         description: '',
                         category: 'animation'
                     },
-                    // {
-                    //     id: '40',
-                    //     thumbnail: thumbnailImage,  // A preview image for the video
-                    //     fullSize: thumbnailImage,   // Same preview image
-                    //     title: 'My YouTube Video',
-                    //     description: 'Description of the video',
-                    //     category: 'animation',
-                    //     type: 'video',
-                    //     videoUrl: 'dQw4w9WgXcQ'  // The YouTube video ID from the URL
-                    // }
+                    {
+                        id: '40',
+                        thumbnail: darkgirl1,
+                        fullSize: darkgirl1,
+                        title: 'Dark Aesthetic Girl',
+                        description: '',
+                        category: '2d',
+                        relatedImages: [
+                            {
+                                fullSize: darkgirl2,
+                                description: 'Process gif'
+                            }
+                        ]
+                    },
                 ];
 
                 // Filter images based on category
